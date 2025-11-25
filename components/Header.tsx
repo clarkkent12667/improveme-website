@@ -133,8 +133,8 @@ export function Header() {
                         </button>
 
                         {activeDropdown === 'courses' && (
-                            <div className="absolute left-0 top-full pt-2 animate-slide-down">
-                                <div className="bg-background/98 backdrop-blur-md border-2 border-primary/20 rounded-lg shadow-xl p-2 flex">
+                            <div className="absolute left-0 top-full pt-2 opacity-0 translate-y-[-8px] animate-[fadeIn_0.4s_ease-out_forwards]">
+                                <div className="bg-background border-2 border-primary/20 rounded-lg shadow-xl p-2 flex">
                                     {/* Main Categories List */}
                                     <div className="min-w-[200px] pr-4">
                                         <div
@@ -162,7 +162,7 @@ export function Header() {
 
                                     {/* Courses Submenu */}
                                     {hoveredCourseCategory && (
-                                        <div className="border-l-2 border-primary/20 pl-4 min-w-[250px] animate-slide-down">
+                                        <div className="border-l-2 border-primary/20 pl-4 min-w-[250px] opacity-0 translate-x-[-8px] animate-[fadeIn_0.4s_ease-out_forwards]">
                                             <ul className="space-y-1">
                                                 {coursesData[hoveredCourseCategory as keyof typeof coursesData].map((course, idx) => (
                                                     <li key={course.href}>
@@ -198,8 +198,8 @@ export function Header() {
                         </button>
 
                         {activeDropdown === 'curriculum' && (
-                            <div className="absolute left-0 top-full pt-2 animate-slide-down">
-                                <div className="bg-background/98 backdrop-blur-md border-2 border-primary/20 rounded-lg shadow-xl p-2 flex">
+                            <div className="absolute left-0 top-full pt-2 opacity-0 translate-y-[-8px] animate-[fadeIn_0.4s_ease-out_forwards]">
+                                <div className="bg-background border-2 border-primary/20 rounded-lg shadow-xl p-2 flex">
                                     {/* Main Stages List */}
                                     <div className="min-w-[200px] pr-4">
                                         <div
@@ -248,7 +248,7 @@ export function Header() {
 
                                     {/* Subjects Submenu */}
                                     {hoveredStage && (
-                                        <div className="border-l-2 border-primary/20 pl-4 min-w-[220px] animate-slide-down">
+                                        <div className="border-l-2 border-primary/20 pl-4 min-w-[220px] opacity-0 translate-x-[-8px] animate-[fadeIn_0.4s_ease-out_forwards]">
                                             <ul className="space-y-1">
                                                 {curriculumSubjects[hoveredStage as keyof typeof curriculumSubjects].map((subject, idx) => (
                                                     <li key={subject.href}>
