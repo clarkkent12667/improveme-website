@@ -16,7 +16,6 @@ import {
     NavigationMenu,
     NavigationMenuContent,
     NavigationMenuItem,
-    NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
@@ -161,16 +160,11 @@ function HierarchicalMenu({ categories }: { categories: typeof courseCategories 
                         <Link
                             key={item.href}
                             href={item.href}
-                            legacyBehavior
-                            passHref
+                            className={cn(
+                                "block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            )}
                         >
-                            <NavigationMenuLink
-                                className={cn(
-                                    "block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                )}
-                            >
-                                <div className="text-sm font-medium leading-none">{item.name}</div>
-                            </NavigationMenuLink>
+                            <div className="text-sm font-medium leading-none">{item.name}</div>
                         </Link>
                     ))}
                 </div>
@@ -202,10 +196,8 @@ export function Header() {
                     <NavigationMenu>
                         <NavigationMenuList>
                             <NavigationMenuItem>
-                                <Link href="/" legacyBehavior passHref>
-                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                        Home
-                                    </NavigationMenuLink>
+                                <Link href="/" className={navigationMenuTriggerStyle()}>
+                                    Home
                                 </Link>
                             </NavigationMenuItem>
 
@@ -224,34 +216,26 @@ export function Header() {
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <Link href="/about" legacyBehavior passHref>
-                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                        About Us
-                                    </NavigationMenuLink>
+                                <Link href="/about" className={navigationMenuTriggerStyle()}>
+                                    About Us
                                 </Link>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <Link href="/faq" legacyBehavior passHref>
-                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                        FAQ
-                                    </NavigationMenuLink>
+                                <Link href="/faq" className={navigationMenuTriggerStyle()}>
+                                    FAQ
                                 </Link>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <Link href="/blogs" legacyBehavior passHref>
-                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                        Blogs
-                                    </NavigationMenuLink>
+                                <Link href="/blogs" className={navigationMenuTriggerStyle()}>
+                                    Blogs
                                 </Link>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <Link href="/contact" legacyBehavior passHref>
-                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                        Contact Us
-                                    </NavigationMenuLink>
+                                <Link href="/contact" className={navigationMenuTriggerStyle()}>
+                                    Contact Us
                                 </Link>
                             </NavigationMenuItem>
                         </NavigationMenuList>
