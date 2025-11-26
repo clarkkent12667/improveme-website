@@ -14,7 +14,7 @@ export function HierarchicalMenu({ categories }: { categories: CourseCategory[] 
     const [activeCategory, setActiveCategory] = React.useState(categories[0]);
 
     return (
-        <div className="flex w-[600px] h-[320px] bg-background rounded-md overflow-hidden">
+        <div className="flex w-[600px] h-[380px] bg-background rounded-md overflow-hidden">
             {/* Sidebar */}
             <div className="w-[200px] shrink-0 border-r bg-muted/30 p-3 overflow-y-auto">
                 <div className="space-y-1">

@@ -13,7 +13,7 @@ export function Hero() {
     }, []);
 
     return (
-        <section className="relative overflow-hidden bg-background py-20 md:py-32">
+        <section className="relative overflow-hidden bg-background pt-12 pb-20 md:pt-20 md:pb-28">
             {/* Animated gradient background */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent-purple/5 to-accent-cyan/5 animate-gradient pointer-events-none" />
 
