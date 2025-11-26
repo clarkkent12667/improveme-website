@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Calendar, ArrowRight } from "lucide-react";
 
@@ -235,7 +236,7 @@ export default function BlogsPage() {
                                     <CardDescription className="text-base mb-4 flex-1">
                                         {blog.excerpt}
                                     </CardDescription>
-                                    <Link 
+                                    <Link
                                         href={`/blogs/${blog.slug}`}
                                         className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
                                     >
@@ -259,9 +260,9 @@ export default function BlogsPage() {
                         Subscribe to our newsletter or follow us to receive the latest educational tips, insights, and updates from Improve ME Institute.
                     </p>
                     <Link href="/#book-assessment">
-                        <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <Button size="lg" variant="secondary" className="h-12 px-8">
                             Contact Us
-                        </button>
+                        </Button>
                     </Link>
                 </div>
             </section>

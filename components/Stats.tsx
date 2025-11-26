@@ -14,7 +14,7 @@ function AnimatedCounter({ end, suffix = "", duration = 2000 }: { end: number; s
         const animate = (timestamp: number) => {
             if (!startTime) startTime = timestamp;
             const progress = Math.min((timestamp - startTime) / duration, 1);
-            
+
             // Easing function for smooth animation
             const easeOutQuart = 1 - Math.pow(1 - progress, 4);
             setCount(Math.floor(easeOutQuart * end));
@@ -48,18 +48,25 @@ export function Stats() {
         <section className="py-20 bg-gradient-to-r from-primary via-accent-purple to-primary text-primary-foreground relative overflow-hidden">
             {/* Animated background overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-accent-purple/90 to-primary/90 animate-gradient opacity-100" />
-            
+
             {/* Floating particles */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                {[...Array(6)].map((_, i) => (
+                {[
+                    { left: 15, top: 20, delay: 0, duration: 6 },
+                    { left: 85, top: 15, delay: 1.5, duration: 5 },
+                    { left: 45, top: 80, delay: 3, duration: 7 },
+                    { left: 70, top: 50, delay: 4.5, duration: 5.5 },
+                    { left: 25, top: 65, delay: 2, duration: 6.5 },
+                    { left: 60, top: 30, delay: 5, duration: 4.5 },
+                ].map((particle, i) => (
                     <div
                         key={i}
                         className="absolute w-2 h-2 bg-white/20 rounded-full animate-float"
                         style={{
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 6}s`,
-                            animationDuration: `${4 + Math.random() * 4}s`,
+                            left: `${particle.left}%`,
+                            top: `${particle.top}%`,
+                            animationDelay: `${particle.delay}s`,
+                            animationDuration: `${particle.duration}s`,
                         }}
                     />
                 ))}
@@ -68,8 +75,8 @@ export function Stats() {
             <div className="container relative z-10">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     {stats.map((stat, index) => (
-                        <div 
-                            key={index} 
+                        <div
+                            key={index}
                             className="flex flex-col items-center p-4 rounded-lg hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-glow"
                         >
                             <div className="bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white">

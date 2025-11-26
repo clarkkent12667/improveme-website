@@ -16,39 +16,35 @@ export function Hero() {
         <section className="relative overflow-hidden bg-background py-20 md:py-32">
             {/* Animated gradient background */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent-purple/5 to-accent-cyan/5 animate-gradient pointer-events-none" />
-            
+
             <div className="container relative z-10 flex flex-col items-center text-center">
-                <div 
-                    className={`inline-flex items-center rounded-full border-2 border-primary/20 px-4 py-2 text-sm font-medium text-primary mb-6 bg-primary/10 backdrop-blur-sm transition-all duration-700 ${
-                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-                    }`}
+                <div
+                    className={`inline-flex items-center rounded-full border-2 border-primary/20 px-4 py-2 text-sm font-medium text-primary mb-6 bg-primary/10 backdrop-blur-sm transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+                        }`}
                 >
                     <span>Top-Rated Tutoring Center in Dubai</span>
-                    <ArrowRight className="ml-2 h-4 w-4 animate-bounce" />
+                    <ArrowRight className="ml-2 h-4 w-4 animate-pulse" />
                 </div>
 
-                <h1 
-                    className={`text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-5xl mb-6 transition-all duration-700 delay-100 ${
-                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                    }`}
+                <h1
+                    className={`text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-5xl mb-6 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                        }`}
                 >
                     <span className="text-primary">
                         Leading Tutoring Center and Coaching Institute
                     </span>
                 </h1>
 
-                <p 
-                    className={`text-xl text-muted-foreground max-w-3xl mb-10 transition-all duration-700 delay-200 ${
-                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                    }`}
+                <p
+                    className={`text-xl text-muted-foreground max-w-3xl mb-10 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                        }`}
                 >
                     Exceptional afterschool tutoring programs for both primary and secondary students. We offer personalised academic support across all major subjects to elevate your child's performance.
                 </p>
 
-                <div 
-                    className={`flex flex-col sm:flex-row gap-4 w-full sm:w-auto transition-all duration-700 delay-300 ${
-                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                    }`}
+                <div
+                    className={`flex flex-col sm:flex-row gap-4 w-full sm:w-auto transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                        }`}
                 >
                     <Link href="#book-assessment">
                         <Button size="lg" variant="gradient" className="h-12 px-8 text-lg">
