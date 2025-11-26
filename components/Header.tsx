@@ -200,6 +200,12 @@ export function Header() {
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
+
+                    <Link href="/#book-assessment">
+                        <Button size="lg" className="ml-2">
+                            Book Free Assessment
+                        </Button>
+                    </Link>
                 </div>
 
                 {/* Mobile Navigation */}
@@ -295,6 +301,11 @@ export function Header() {
                                 </Link>
                                 <Link href="/contact" onClick={() => setIsOpen(false)} className="text-lg font-medium">
                                     Contact Us
+                                </Link>
+                                <Link href="/#book-assessment" onClick={() => setIsOpen(false)}>
+                                    <Button className="w-full mt-2">
+                                        Book Free Assessment
+                                    </Button>
                                 </Link>
                             </div>
                         </SheetContent>
