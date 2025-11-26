@@ -23,9 +23,9 @@ import {
 } from "@/components/ui/navigation-menu";
 
 // --- Lazy loaded components for performance ---
-const HierarchicalMenu = dynamic(() => import('./HierarchicalMenu').then(mod => ({ default: mod.HierarchicalMenu })), {
+const HierarchicalMenu = dynamic(() => import('./HierarchicalMenu').then(mod => mod.HierarchicalMenu), {
   loading: () => <div className="p-4">Loading...</div>,
-  ssr: false
+  ssr: true
 });
 
 // --- Data Definitions ---
@@ -130,9 +130,14 @@ export function Header() {
     const [isOpen, setIsOpen] = React.useState(false);
     const [expandedMobile, setExpandedMobile] = React.useState<string | null>(null);
 
+    // Debug logging for mobile menu state
+    React.useEffect(() => {
+        console.log('Mobile menu isOpen:', isOpen);
+    }, [isOpen]);
+
     return (
         <header 
-            className="sticky top-0 z-50 w-full border-b border-white/30 shadow-lg shadow-black/5"
+            className="sticky top-0 z-40 w-full border-b border-white/30 shadow-lg shadow-black/5"
             style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.3)',
                 backdropFilter: 'blur(24px)',
@@ -217,7 +222,7 @@ export function Header() {
                                 <span className="sr-only">Toggle menu</span>
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="w-full max-w-xs sm:max-w-sm md:w-[320px] overflow-y-auto">
+                        <SheetContent side="right" className="w-full max-w-xs sm:max-w-sm md:w-[320px] overflow-y-auto z-50">
                             <div className="flex flex-col gap-4 mt-8">
                                 <Link href="/" onClick={() => setIsOpen(false)} className="text-lg font-medium">
                                     Home
