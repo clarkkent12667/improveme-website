@@ -69,53 +69,65 @@ export function Footer() {
                         <h3 className="text-sm font-semibold">Our Courses</h3>
                         <div className="flex flex-col gap-2">
                             <Link href="/courses/primary-mathematics" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                Primary Mathematics
+                                Primary Mathematics Tutor
                             </Link>
                             <Link href="/courses/primary-english" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                Primary English
+                                Primary English Tutoring
                             </Link>
                             <Link href="/courses/primary-science" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                Primary Science
+                                Primary Science Tutoring
                             </Link>
                             <Link href="/courses/secondary-mathematics" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                Secondary Mathematics
+                                Secondary Mathematics Tutor
                             </Link>
                             <Link href="/courses/secondary-physics" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                Secondary Physics
+                                Secondary Physics Tutoring
                             </Link>
                             <Link href="/courses/secondary-chemistry" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                Secondary Chemistry
+                                Secondary Chemistry Tutoring
                             </Link>
                             <Link href="/courses/secondary-biology" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                Secondary Biology
+                                Secondary Biology Tutoring
+                            </Link>
+                            <Link href="/courses/secondary-english" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
+                                Secondary English Language Tutoring
+                            </Link>
+                            <Link href="/courses/secondary-business" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
+                                Secondary Business Studies Tutoring
+                            </Link>
+                            <Link href="/courses/secondary-economics" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
+                                Secondary Economics Tutoring
+                            </Link>
+                            <Link href="/courses/secondary-psychology" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
+                                Secondary Psychology Tutoring
                             </Link>
                             <Link href="/courses/chess" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                Chess Tutoring
+                                Chess
                             </Link>
                         </div>
                     </div>
 
-                    {/* Curriculum */}
+                    {/* Our Curriculum */}
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-sm font-semibold">Curriculum</h3>
+                        <h3 className="text-sm font-semibold">Our Curriculum</h3>
                         <div className="flex flex-col gap-2">
                             <Link href="/curriculum/eyfs" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
                                 EYFS (Age 3-5)
                             </Link>
                             <Link href="/curriculum/key-stage-1" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                Key Stage 1
+                                Key Stage 1 (Age 5-7)
                             </Link>
                             <Link href="/curriculum/key-stage-2" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                Key Stage 2
+                                Key Stage 2 (Age 7-11)
                             </Link>
                             <Link href="/curriculum/key-stage-3" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                Key Stage 3
+                                Key Stage 3 (Age 11-14)
                             </Link>
                             <Link href="/curriculum/igcse-gcse-myp" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                IGCSE/GCSE/MYP
+                                IGCSE/GCSE/MYP (Age 14-16)
                             </Link>
                             <Link href="/curriculum/a-levels-ib" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1">
-                                A-Levels/IB
+                                A-Levels/IB (Age 16-18)
                             </Link>
                         </div>
                     </div>
