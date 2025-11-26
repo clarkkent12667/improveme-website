@@ -1,0 +1,45 @@
+/* Performance optimizations */
+/* Enable GPU acceleration for animations */
+.animate-gradient,
+.animate-float {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize images */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduce paint on scroll */
+body {
+  contain: layout style paint;
+}
+
+/* Optimize font loading */
+@font-face {
+  font-family: 'OptimizedFont';
+  font-display: swap;
+  src: local('Arial'), local('Helvetica');
+}
+
+/* Reduce layout shifts */
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
