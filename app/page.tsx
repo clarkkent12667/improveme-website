@@ -27,7 +27,7 @@ const CTA = dynamic(() => import("@/components/CTA").then(mod => ({ default: mod
 
 export default function Home() {
     return (
-        <div className="flex flex-col min-h-screen pt-20">
+        <div className="flex flex-col min-h-screen">
             <Hero />
             <Features />
             <Stats />
