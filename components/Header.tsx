@@ -227,7 +227,7 @@ export function Header() {
                                         <ChevronDown className={`h-4 w-4 transition-transform ${expandedMobile === 'courses' ? 'rotate-180' : ''}`} />
                                     </button>
                                     {expandedMobile === 'courses' && (
-                                        <div className="ml-4 mt-2 space-y-4 border-l-2 pl-4">
+                                        <div className="ml-4 mt-2 space-y-4 border-l-2 pl-4 max-h-[60vh] overflow-y-auto pr-2">
                                             {courseCategories.map((cat) => (
                                                 <div key={cat.title}>
                                                     <p className="text-sm font-semibold text-primary mb-2">{cat.title}</p>
@@ -259,7 +259,7 @@ export function Header() {
                                         <ChevronDown className={`h-4 w-4 transition-transform ${expandedMobile === 'curriculum' ? 'rotate-180' : ''}`} />
                                     </button>
                                     {expandedMobile === 'curriculum' && (
-                                        <div className="ml-4 mt-2 space-y-4 border-l-2 pl-4">
+                                        <div className="ml-4 mt-2 space-y-4 border-l-2 pl-4 max-h-[60vh] overflow-y-auto pr-2">
                                             {curriculumCategories.map((cat) => (
                                                 <div key={cat.title}>
                                                     <p className="text-sm font-semibold text-primary mb-1">{cat.title}</p>
