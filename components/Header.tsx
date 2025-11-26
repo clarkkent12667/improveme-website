@@ -139,14 +139,14 @@ export function Header() {
                 WebkitBackdropFilter: 'blur(24px)'
             }}
         >
-            <div className="container flex h-20 items-center justify-between">
+            <div className="container flex h-16 sm:h-20 items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2">
                     <Image
                         src="/images/logo-370x90-1.png"
                         alt="Improve ME Institute"
-                        width={280}
-                        height={68}
-                        className="h-16 w-auto"
+                        width={240}
+                        height={60}
+                        className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
                         priority
                     />
                 </Link>
@@ -200,22 +200,18 @@ export function Header() {
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
-
-                    <Link href="/#book-assessment">
-                        <Button>Book Assessment</Button>
-                    </Link>
                 </div>
 
                 {/* Mobile Navigation */}
                 <div className="lg:hidden">
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon">
-                                <Menu className="h-6 w-6" />
+                            <Button variant="ghost" size="icon" className="h-11 w-11">
+                                <Menu className="h-7 w-7" />
                                 <span className="sr-only">Toggle menu</span>
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="w-[300px] overflow-y-auto">
+                        <SheetContent side="right" className="w-full max-w-xs sm:max-w-sm md:w-[320px] overflow-y-auto">
                             <div className="flex flex-col gap-4 mt-8">
                                 <Link href="/" onClick={() => setIsOpen(false)} className="text-lg font-medium">
                                     Home
@@ -299,9 +295,6 @@ export function Header() {
                                 </Link>
                                 <Link href="/contact" onClick={() => setIsOpen(false)} className="text-lg font-medium">
                                     Contact Us
-                                </Link>
-                                <Link href="/#book-assessment" onClick={() => setIsOpen(false)}>
-                                    <Button className="mt-4 w-full">Book Assessment</Button>
                                 </Link>
                             </div>
                         </SheetContent>
